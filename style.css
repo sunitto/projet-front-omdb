@@ -1,0 +1,56 @@
+/* pour le header jaune comme sur allociné */
+header {
+  text-align: center;
+  margin-top: 20px;
+  background-color: #fdcc00;
+  padding: 20px;
+  font-size: 24px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+}
+
+
+#results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+/* CSS pour les cartes de film générées dans le .js */
+.movie-card {
+  width: 350px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+/* hover pour mettre en valeur quand on passe la souris dessus */
+.movie-card:hover {
+  transform: scale(1.03);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 10px;
+  text-align: center;
+}
+.movie-card {
+  width: 200px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
