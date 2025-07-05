@@ -1,3 +1,18 @@
+/* on supprime le text deco et les variation de couleur sur les lien hypertext */
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+
 /* pour le header jaune comme sur allociné */
 html, body {
   margin: 0;
@@ -72,8 +87,8 @@ header {
 
 }
 
-/* bouton de validatino de la recherche */
-#submit-search-button {
+/* bouton de validation de la recherche */
+#submit-search-button, #details-back-button {
   padding: 10px 20px;
   background-color: #ffffff;
   border: none;
@@ -81,7 +96,7 @@ header {
   cursor: pointer;
 
 }
-#submit-search-button:hover {
+#submit-search-button:hover, #details-back-button:hover {
   transform: scale(1.03);
 }
 
