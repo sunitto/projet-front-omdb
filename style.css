@@ -85,13 +85,13 @@ header {
   transform: scale(1.03);
 }
 
-#search-results-text {
+#search-results-text, #details-title {
   text-align: center;
   margin-top: 20px;
   font-size: 24px;
   color: #333;
 }
-#how-to-use-text {
+#how-to-use-text, #details-back-instruction {
   text-align: center;
   margin-top: 10px;
   font-size: 18px;

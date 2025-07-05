@@ -1,7 +1,7 @@
 const searchBar = document.querySelector("#search-bar");
 const resultsDisplay = document.querySelector("#results");
-const apiKey = ""; // Remplacez par votre clé API OMDB
-const movieCards = document.querySelector(".movie-cards");
+const apiKey = "8096bc5a"; // Remplacez par votre clé API OMDB
+
 
 searchBar.addEventListener("submit", function(event) {
   event.preventDefault(); // Pour empêcher le rechargement de la page
@@ -15,13 +15,13 @@ searchBar.addEventListener("submit", function(event) {
       if (data.Response === "True") { // si la réponse existe
         //création des cartes de film et affichage des résultats
         resultsDisplay.innerHTML = data.Search.map(movie => `
-          <div class="movie-card">
+          <a href="details.html?id=${movie.imdbID}" class="movie-card">
             <img src="${movie.Poster}" alt="${movie.Title} poster" />
             <div class="movie-info">
               <p><strong>${movie.Title}</strong></p>
               <p>${movie.Year}</p>
             </div>
-          </div>
+          </a>
         `).join("");
       } else {
         resultsDisplay.innerHTML = `<p>No results found for "${query}".</p>`;

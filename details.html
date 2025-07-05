@@ -3,24 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <title>title</title>
+  <script src="https://kit.fontawesome.com/3ddfedcb49.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css" />
+  <script src="details.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 
 <body>
   <header>
-    <h1>Welcome to movie search</h1>
-    <form id="search-bar">
-      <input type="text" name="query" placeholder="Search for a movie title" required />
-      <button type="submit">Search</button>
-    </form>
+    <h1>Movie Search powered by OMDB</h1>
+    <button onclick="history.back()">Retour</button>
+
   </header>
   <div class="container">
-     <!-- nom du film à fetch par ID -->
-    <h2>Display results below</h2>
+    <h2 id="details-title">Your movie details</h2>
+    <p id="details-back-instruction">Please click on the back button to return to the main page. Then enter your key-words above in the search engine bar. You can have access to a lot of informations about a movie you are looking for. Don't know where to star? Try by title and have fun!</p>
 
-    <div id="results">
-      <!-- les résultats seront affichés ici -->
+    <div id="movie-details">
+      <!-- les détails seront affichés ici -->
+      <div class="movie-card">
+        <img id="movie-poster" src="" alt="Movie Poster" />
+        <div class="movie-info">
+          <h3 id="movie-title"></h3>
+          <p id="movie-year"></p>
+          <p id="movie-genre"></p>
+          <p id="movie-director"></p>
+          <p id="movie-actors"></p>
+          <p id="movie-plot"></p>
+        </div>
     </div>
   </div>
 </body>
