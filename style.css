@@ -1,12 +1,23 @@
 /* pour le header jaune comme sur allociné */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e6e6e6;
+}
+
+/* pour le header sticky aux couleur de Allociné */
 header {
   text-align: center;
-  margin-top: 20px;
   background-color: #fdcc00;
   padding: 20px;
   font-size: 24px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
+/* block contenant les infos principales de la recherche */
 .container {
   width: 100%;
   margin: 0 auto;
@@ -14,13 +25,6 @@ header {
 }
 
 
-#results {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
 /* CSS pour les cartes de film générées dans le .js */
 .movie-card {
   width: 350px;
@@ -37,20 +41,59 @@ header {
   transform: scale(1.03);
 }
 
+/* image des cartes de film */
 .movie-card img {
   width: 100%;
   height: 250px;
   object-fit: cover;
 }
 
+/* div comprenant les informations de date et de titre des cartes de film */
 .movie-info {
   padding: 10px;
   text-align: center;
 }
-.movie-card {
-  width: 200px;
-  height: 350px;
+/* zone où s'affichent les résultats de recherche */
+#results {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* zone de saisie de texte dans la barre de recherche */
+#search-input-zone {
+  width: 80%;
+  padding: 10px;
+  border-radius:5px;
+  border:none
+
+}
+
+/* bouton de validatino de la recherche */
+#submit-search-button {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+#submit-search-button:hover {
+  transform: scale(1.03);
+}
+
+#search-results-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 24px;
+  color: #333;
+}
+#how-to-use-text {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+  color: #666;
 }

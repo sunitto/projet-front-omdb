@@ -1,6 +1,7 @@
 const searchBar = document.querySelector("#search-bar");
 const resultsDisplay = document.querySelector("#results");
-const apiKey = ""; // Remplacez par votre clé API OMDB
+const apiKey = "8096bc5a"; // Remplacez par votre clé API OMDB
+const movieCards = document.querySelector(".movie-cards");
 
 searchBar.addEventListener("submit", function(event) {
   event.preventDefault(); // Pour empêcher le rechargement de la page
@@ -12,11 +13,13 @@ searchBar.addEventListener("submit", function(event) {
     .then(response => response.json()) //puis une fois qu'on a la réponse, on la convertit en JSON
     .then(data => {
       if (data.Response === "True") { // si la réponse existe
+        //création des cartes de film et affichage des résultats
         resultsDisplay.innerHTML = data.Search.map(movie => `
           <div class="movie-card">
             <img src="${movie.Poster}" alt="${movie.Title} poster" />
             <div class="movie-info">
-              <p>${movie.Title} | ${movie.Year}</p>
+              <p><strong>${movie.Title}</strong></p>
+              <p>${movie.Year}</p>
             </div>
           </div>
         `).join("");
@@ -24,6 +27,7 @@ searchBar.addEventListener("submit", function(event) {
         resultsDisplay.innerHTML = `<p>No results found for "${query}".</p>`;
       }
     })
+    //message d'erreur si la requête échoue
     .catch(error => {
       console.error("Error fetching data:", error);
       resultsDisplay.innerHTML = `<p>Error fetching data. Please try again later.</p>`;
