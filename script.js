@@ -1,6 +1,6 @@
 const searchBar = document.querySelector("#search-bar");
 const resultsDisplay = document.querySelector("#results");
-const apiKey = "8096bc5a"; // Remplacez par votre clé API OMDB
+const apiKey = ""; // Remplacez par votre clé API OMDB
 
 
 searchBar.addEventListener("submit", function(event) {
