@@ -1,10 +1,8 @@
 # projet-front-omdb
-This mini project is a search page using OMDB API that mimic the french allocine webpage.  
--The main purpose is to use HTML and JS only to code a simple page.  
--The HTML file contains obviously everything related to the DOM.  
--The CSS file contains everything related to the design.  
--The JS file contains the interaction and the creation of the movies card that is displayed in the DOM.  
--To make it works, be sure to put your OMDB API key in the JS file to make it works. You can find it on: https://www.omdbapi.com/apikey.aspx  
--you can have access at the page here >> https://sunitto.github.io/projet-front-omdb/index.html  
-
-----Next step is to make clickable every cards to display more details about the movie selected in a new HTML page.
+-Ceci est un mini projet de front end. Il utilise l'API OMDB dans le but de faire une page de recherche de film. Il reprend le principe d'allociné dans ses codes principaux.
+-L'objectif est l'utilisation exclusive du HTML et du JS
+-Les pages HTML consistent en: l'index qui est la page principale et details qui est la page qui s'affiche lorsqu'on click sur une carte de film après recherche.
+-Le fichier CSS contient la mise en forme du design.
+-Les fichiers script.js et details.js contiennent les interactions avec le DOM dont les appels vers l'API OMDB
+-Pour vous assurez du bon fonctionnement des pages et les tester, veuillez "pull" le "repo" et vous menir de votre clé API OMDB disponible ci contre : https://www.omdbapi.com/apikey.aspx et de la placer dans les fichier script.js et details.js aux emplacements indiqués en commentaires.
+-La page a été hébergée sur >> https://sunitto.github.io/projet-front-omdb/index.html

@@ -1,6 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 const movieID = urlParams.get("id");
-const apiKey = ""; // Remplacez par votre clé API OMDB
+const apiKey = "8096bc5a"; // Remplacez par votre clé API OMDB
 fetch(`https://www.omdbapi.com/?i=${movieID}&apikey=${apiKey}`)
   .then(response => response.json())
   .then(data => {
