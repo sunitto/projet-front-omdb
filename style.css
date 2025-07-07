@@ -37,11 +37,13 @@ header {
   width: 100%;
   margin: 0 auto;
   background-color: #f2f2f2;
+
 }
 
 
 /* CSS pour les cartes de film générées dans le .js */
 .movie-card {
+  height: 400px;
   width: 350px;
   background-color: #f9f9f9;
   border-radius: 10px;
@@ -51,6 +53,22 @@ header {
   display: flex;
   flex-direction: column;
 }
+
+.poster-container {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0; /* couleur de fond pour les posters */
+}
+
+.movie-info p {
+  flex:2;
+  margin: 5px 0;
+  color: #333;
+  font-size: 16px;
+}
+
 /* hover pour mettre en valeur quand on passe la souris dessus */
 .movie-card:hover {
   transform: scale(1.03);
@@ -60,7 +78,7 @@ header {
 .movie-card img {
   width: 100%;
   height: 250px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* div comprenant les informations de date et de titre des cartes de film */
@@ -71,9 +89,10 @@ header {
 /* zone où s'affichent les résultats de recherche */
 #results {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 20px;
   padding: 20px;
 }
@@ -112,3 +131,58 @@ header {
   font-size: 18px;
   color: #666;
 }
+
+/* zone de détails du film */
+
+#movie-details {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.movie-details-card {
+  display: flex;
+  flex-direction: row;
+  background-color: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* Affiche */
+.movie-details-poster-container {
+  flex: 0 0 250px;
+  background-color: #ddd;
+}
+
+.movie-details-poster-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Infos */
+.movie-details-info {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.movie-details-info h3 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.movie-details-info p {
+  margin: 0;
+  line-height: 1.4;
+  font-size: 1rem;
+  color: #555;
+}
+

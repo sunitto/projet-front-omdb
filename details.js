@@ -1,6 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 const movieID = urlParams.get("id");
-const apiKey = ""; // Remplacez par votre clé API OMDB
+const apiKey = "8096bc5a"; // Remplacez par votre clé API OMDB
 fetch(`https://www.omdbapi.com/?i=${movieID}&apikey=${apiKey}`)
   .then(response => response.json())
   .then(data => {
@@ -17,8 +17,12 @@ fetch(`https://www.omdbapi.com/?i=${movieID}&apikey=${apiKey}`)
     movieTitle.textContent = data.Title;
     movieYear.textContent = data.Year;
     movieGenre.textContent = data.Genre;
-    movieDirector.textContent = data.Director;
-    movieActors.textContent = data.Actors;
+    movieDirector.innerHTML = `by <strong>${data.Director}</strong>`;
+    // on met le nom du réalisateur en gras
+    const actors = data.Actors.split(", ").map(name => name.trim());
+    // on sépare les acteurs par des virgules et on les met dans un tableau
+    movieActors.innerHTML = `with ${actors.map(name => `<strong>${name}</strong>`).join(', ')}`;
+    // on affiche les acteurs en gras
     moviePlot.textContent = data.Plot;
     moviePoster.src = data.Poster;
     } else {
